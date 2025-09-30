@@ -1,7 +1,9 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import crud, schemas, utils, models
-from database import db
+from . import crud, schemas, utils, models
+
+from .database import db
+
 import os, json, datetime
 from dotenv import load_dotenv
 from google import genai
